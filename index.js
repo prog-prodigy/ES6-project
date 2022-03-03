@@ -74,7 +74,7 @@ prevBtn.addEventListener("click",()=>{
 
     cardNumber--
     console.log(cardNumber)
-    if(cardNumber===-1){
+    if(cardNumber<0){
         cardNumber = 3
     }
    currentCard(cardNumber)
@@ -88,7 +88,7 @@ nextBtn.addEventListener("click",()=>{
     
     cardNumber++
     console.log(cardNumber)
-    if(cardNumber===4){
+    if(cardNumber>3){
         cardNumber = 0
     }
    currentCard(cardNumber)
