@@ -27,11 +27,13 @@
 button{
     background-color: transparent;
     border: none;
-    font-size: larger;
+    font-size: x-large;
+
 
 }
 #random{
     box-shadow: 0 0 5px grey;
     padding: 0.2em 0.5em;
     margin: 0.2em;
+    font-size: large;
 }

@@ -11,15 +11,12 @@ let input = 0
 let cardNumber = 0
 function randomPage(){
     let randomNumber = Math.floor(Math.random()*card.length)
-    titles.textContent = card[randomNumber].title 
-    titleMinis.textContent = card[randomNumber].titleMini
-    subtitleMinis.textContent = card[randomNumber].subtitleMini
-    foodImg.src = card[randomNumber].img
     currentCard(randomNumber)
     
 }
 function currentCard(input){
     titles.textContent = card[input].title 
+    subtitles.textContent = card[input].subtitle 
     titleMinis.textContent = card[input].titleMini
     subtitleMinis.textContent = card[input].subtitleMini
     foodImg.src = card[input].img
@@ -32,31 +29,38 @@ function currentCard(input){
 let card = [
     {id:1,
     title: `Food item1`,
-    subtitle: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium neque perspiciatis culpa odio nemo eligendi!`,
+    subtitle: `One: Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium neque perspiciatis culpa odio nemo eligendi!`,
     img: `/img-1.png`,
     titleMini:`Hotel Name1 `,
-    subtitleMini:`Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto quasi fuga numquam saepe, qui nam vel error maiores hic quidem nesciunt corpori.`
+    subtitleMini:`Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto quasi fuga numquam saepe, qui nam vel error maiores hic quidem nesciunt corporis veritatis`
     },
     {id:2,
     title: `Food item2`,
-    subtitle: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium neque perspiciatis culpa odio nemo eligendi!`,
+    subtitle: `Two:Lorem ipsum dolor sssit amet consectetur adipisicing elit. Laudantium neque perspiciatis culpa odio nemo eligendi!`,
     img: `/img-2.png`,
     titleMini:`Hotel Name2`,
-    subtitleMini:`Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto quasi fuga numquam saepe, qui nam vel error maiores hic quidem nesciunt corporis veritatis voluptatem, exercitationem fugiat .`
+    subtitleMini:`Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto quasi fuga numquam saepe, qui nam vel error maiores hic quidem nesciunt corporis veritatis`
     },
     {id:3,
     title: `Food item3`,
-    subtitle: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium neque perspiciatis culpa odio nemo eligendi!`,
+    subtitle: `Three: Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium neque perspiciatis culpa odio nemo eligendi!`,
     img: `/img-3.jpg`,
     titleMini:`Hotel Name 3`,
-    subtitleMini:`uam saepe, qui nam vel error maiores hic quidem nesciunt corporis veritatis voluptatem, exercitationem fugiat itaque consectetur assumenda quo.`
+    subtitleMini:`Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto quasi fuga numquam saepe, qui nam vel error maiores hic quidem nesciunt corporis veritatis`
     },
     {id:4,
     title: `Food item4`,
-    subtitle: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium neque perspiciatis culpa odio nemo eligendi!`,
+    subtitle: `Four: Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium neque perspiciatis culpa odio nemo eligendi!`,
     img: `/img-4.jpg`,
     titleMini:`Hotel Name 4`,
-    subtitleMini:`Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto quasi fuga numquam saepe, qui nam vel error maiores hic quidem nesciunt corporis veritatis voluptatem, exercitationem fugiat itaque consectetur assumenda quo.`
+    subtitleMini:`Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto quasi fuga numquam saepe, qui nam vel error maiores hic quidem nesciunt corporis veritatis`
+    },
+    {id:5,
+    title: `Food item5`,
+    subtitle: `Four: Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium neque perspiciatis culpa odio nemo eligendi!`,
+    img: `/img-2.png`,
+    titleMini:`Hotel Name 5`,
+    subtitleMini:`Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto quasi fuga numquam saepe, qui nam vel error maiores hic quidem nesciunt corporis veritatis`
     }
 
 ]
@@ -88,7 +92,7 @@ nextBtn.addEventListener("click",()=>{
     
     cardNumber++
     console.log(cardNumber)
-    if(cardNumber>3){
+    if(cardNumber>card.length-1){
         cardNumber = 0
     }
    currentCard(cardNumber)
